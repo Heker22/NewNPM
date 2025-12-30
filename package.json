@@ -1,0 +1,25 @@
+{
+  "name": "newnpm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heker22/NewNPM.git"
+  },
+  "keywords": [],
+  "author": "Matviy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heker22/NewNPM/issues"
+  },
+  "homepage": "https://github.com/Heker22/NewNPM#readme",
+  "dependencies": {
+    "nanoid": "^5.1.6"
+  }
+}
