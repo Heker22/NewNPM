@@ -6,15 +6,15 @@ console.log(id());*/
 
 /*line graphic*/
 
-import {Chart} from 'chart.js'
+/*import Chart from 'chart.js/auto'*/
 
 const lineData = {
     labels:['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datsets: [{
+    datasets: [{
         label: 'Temperature',
         data: [3, 4, 9, 16, 20, 25, 28],
         fill: false,
-        borderColor: 'rgb(75.192.192)',
+        borderColor: 'rgb(75, 192, 192)',
         tension:0.1
     }],
     
