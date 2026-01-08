@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Heker22/NewNPM#readme",
   "dependencies": {
+    "chart.js": "^4.5.1",
     "nanoid": "^5.1.6"
   }
 }
