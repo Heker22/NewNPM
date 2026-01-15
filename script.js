@@ -88,7 +88,7 @@ const image = basicLightbox.create(img);
 image.show();
 */
 
-
+/*ex2
 const html = '<h1>LETSGOSKI</h1>';
 
 const text = basicLightbox.create(html, {
@@ -99,3 +99,63 @@ const text = basicLightbox.create(html, {
 })
 
 text.show();
+*/
+
+
+/*gallery*/
+
+const galleryLinks = document.querySelectorAll('.gallery a');
+
+const images = Array.from(galleryLinks).map(link => link.href);
+
+let currentIndex = 0;
+
+let instains = null;
+
+galleryLinks.forEach((link, index ) => {
+    link.addEventListener('click', event => {
+        event.preventDefault();
+        currentIndex = index;
+        openLightbox();
+    })
+} );
+
+function openLightbox(){
+instains = basicLightbox.create(
+    `  <img src="${images[currentIndex]}" alt="photo" width='90%' >`,
+    {
+        onShow:() => window.addEventListener('keydown',onKeyPress),
+        onClose:() => window.removeEventListener('keydown',onKeyPress),
+    }
+)
+instains.show();
+
+}
+
+
+function onKeyPress(event){
+    if(event.key === 'ArrowRight'){
+        showNext()
+    }
+    if(event.key === 'ArrowLeft'){
+        showPrev()
+    }
+    if(event.key === 'Escape'){
+        instains.close()
+    }
+}
+
+function showNext(){
+    currentIndex = (currentIndex + 1)% images.length;
+    updateImage();
+}
+
+function showPrev(){
+    currentIndex = (currentIndex - 1 + images.length)% images.length;
+    updateImage();
+}
+
+function updateImage(){
+    const img = instains.element().querySelector('img');
+    img.src = images[currentIndex]
+}
