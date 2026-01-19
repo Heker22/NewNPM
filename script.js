@@ -102,7 +102,7 @@ text.show();
 */
 
 
-/*gallery*/
+/*gallery
 
 const galleryLinks = document.querySelectorAll('.gallery a');
 
@@ -158,4 +158,27 @@ function showPrev(){
 function updateImage(){
     const img = instains.element().querySelector('img');
     img.src = images[currentIndex]
+
+
+
+const dog = {
+    name: "Bricks",
+    age: "11",
+    isHappy: true
 }
+
+const dogJSON = JSON.stringify(dog);
+console.log(dogJSON)
+
+const dog = '{"name":"Bricks","age":11,"isHappy":true}';
+
+const dogParse = JSON.parse(dog);
+console.log(dogParse)
+
+*/
+
+
+const book = '{"title": "harry Potter", "author": "J.K Rowling", "genre": "fantastic" }'
+
+const bookParse = JSON.parse(book);
+console.log(bookParse);

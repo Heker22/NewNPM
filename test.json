@@ -1,0 +1,10 @@
+{
+    "name": "John",
+    "age": 30,
+    "eyecolors": "brown",
+    "cars": ["BMW", "Audi"],
+    "favoriteBooks": {
+        "title": "kobzar",
+        "author": "Taras Shevchenko"
+    }
+}
