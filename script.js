@@ -175,10 +175,23 @@ const dog = '{"name":"Bricks","age":11,"isHappy":true}';
 const dogParse = JSON.parse(dog);
 console.log(dogParse)
 
-*/
+
 
 
 const book = '{"title": "harry Potter", "author": "J.K Rowling", "genre": "fantastic" }'
 
 const bookParse = JSON.parse(book);
-console.log(bookParse);
+console.log(bookParse);*/
+
+
+const film = {
+    name: "Pelé",
+    authors: "Jeff e Michael Zimbalist",
+    year: 2016,
+    protagonist: "Edson Arantes do Nascimento (Pelé)",
+    genre: "Biography and sports"
+}
+
+const filmJSON = JSON.stringify(film);
+
+console.log(film);
