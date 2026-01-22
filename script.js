@@ -181,7 +181,7 @@ console.log(dogParse)
 const book = '{"title": "harry Potter", "author": "J.K Rowling", "genre": "fantastic" }'
 
 const bookParse = JSON.parse(book);
-console.log(bookParse);*/
+console.log(bookParse);
 
 
 const film = {
@@ -194,4 +194,38 @@ const film = {
 
 const filmJSON = JSON.stringify(film);
 
-console.log(film);
+console.log(filmJSON);
+
+const settings = {
+    teme: "dark",
+    auth: true,
+    options: [1,2,3]
+}
+
+
+localStorage.setItem("settings", JSON.stringify(settings))
+
+const tem = localStorage.getItem("teme");
+
+localStorage.setItem("settings", JSON.stringify(settings));
+
+localStorage.removeItem("teme");
+
+localStorage.clear()*/
+
+
+const input = document.getElementById('myinput');
+
+const btn = document.getElementById('save');
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedValue = localStorage.getItem('myInputValue');
+    if(savedValue){
+        input.value = savedValue;
+    }
+})
+
+btn.addEventListener('click', () => {
+    localStorage.setItem('myInputValue', input.value);
+    alert('saved')
+})
