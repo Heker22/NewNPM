@@ -1,4 +1,4 @@
-.gallery{
+/*.gallery{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -13,4 +13,4 @@
 .gallery img{
     max-width: 200px;
     cursor: pointer;
-}
+}*/

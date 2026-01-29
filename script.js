@@ -211,7 +211,7 @@ localStorage.setItem("settings", JSON.stringify(settings));
 
 localStorage.removeItem("teme");
 
-localStorage.clear()*/
+localStorage.clear()
 
 
 const input = document.getElementById('myinput');
@@ -229,3 +229,23 @@ btn.addEventListener('click', () => {
     localStorage.setItem('myInputValue', input.value);
     alert('saved')
 })
+
+*/
+
+const countText = document.getElementById('countText');
+
+const resetBtn = document.getElementById('resetBtn');
+
+let count = JSON.parse(localStorage.getItems('visitCount')) || 0;
+
+count++;
+
+localStorage.setItem('visitCount', JSON.stringify(count));
+
+countText.textContext = count;
+
+resetBtn.onclick = () => {
+    localStorage.removeItem('visitCount');
+location.reload();
+    
+}
