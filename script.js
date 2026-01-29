@@ -230,7 +230,7 @@ btn.addEventListener('click', () => {
     alert('saved')
 })
 
-*/
+
 
 const countText = document.getElementById('countText');
 
@@ -248,4 +248,39 @@ resetBtn.onclick = () => {
     localStorage.removeItem('visitCount');
 location.reload();
     
+}
+
+
+
+const input = document.getElementById('form-input');
+const btn = document.getElementById('reset-form');
+const result = document.getElementById('result');
+
+const savedName = JSON.parse(localStorage.getItem('name'));
+if(savedName){
+    result.textContent = 'Hello ' + savedName;
+    input.value = savedName;
+}
+
+btn.onclick = () => {
+    const name = input.value;
+    localStorage.setItem('name', JSON.stringify(name));
+    result.textContent = 'Hello ' + name;
+}*/
+
+
+const color = document.getElementById('color');
+const save = document.getElementById('save');
+
+const savedColor = JSON.parse(localStorage.getItem('color'));
+
+if(savedColor){
+    document.body.style.backgroundColor = savedColor;
+    color.value = savedColor;
+}
+
+save.onclick = () => {
+    const colorBg = color.value;
+    document.body.style.backgroundColor = colorBg;
+    localStorage.setItem('colorBg', JSON.stringify(colorBg))
 }
